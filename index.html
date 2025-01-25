@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - GideonDev</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/img/Logo.svg" alt="Logo GideonDev" class="logo">
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#inicial">Inicio</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicial">
+            <h2>Inicial</h2>
+            <p>Olá! Este é o meu portfólio. Explore para conhecer mais sobre meus projetos e minha trajetória.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GideonDev. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para abrir/fechar o menu hambúrguer
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
