@@ -1,10 +1,11 @@
 /* Estilos gerais do corpo */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background: #01080E;
 }
+
 
 /* Cabeçalho */
 header {
@@ -28,11 +29,11 @@ header .logo {
 
 /* Menu de navegação */
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    list-style: none;
+    /* gap: 1.5rem;
     margin: 0;
-    padding: 0;
+    padding: 0; */
 }
 
 nav ul li {
@@ -43,30 +44,28 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 18px;
+    position: relative;
 }
 
 /* Efeito de borda vermelha ao passar o mouse */
 nav ul li a::after {
     content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
+    bottom: -5px;
     width: 0;
-    height: 2px;
-    background-color: #FF0202; /* Cor da borda */
-    transition: width 0.3s ease;
+    height: 3px;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    color: #FF0202; /* Cor de destaque ao passar o mouse */
-}
-
-/* Quando passar o mouse, a borda vai se expandir da esquerda para a direita */
 nav ul li a:hover::after {
-    width: 100%;
+    width: 100%; 
+    transition: width 0.3s ease-in-out;
 }
+
+
 
 /* Menu Hambúrguer - visível apenas no mobile */
 .menu-toggle {
