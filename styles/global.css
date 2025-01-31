@@ -1,0 +1,20 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #01080E;
+    color: white;
+}
+
+/* Container padrão */
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

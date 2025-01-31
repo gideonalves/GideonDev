@@ -1,0 +1,110 @@
+/* Estilos do Cabeçalho */
+header {
+    color: white; /* Define a cor do texto como branca */
+    padding: 1rem 0; /* Adiciona um preenchimento de 1rem no topo e na parte inferior */
+    border-bottom: 2px solid #FF0202; /* Adiciona uma borda inferior vermelha de 2px */
+}
+
+header .container {
+    display: flex; /* Usa o layout flexível para organizar os itens dentro do container */
+    justify-content: space-between; /* Distribui os itens de forma que fiquem no início e no fim do container */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    max-width: 1200px; /* Define o tamanho máximo do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20px; /* Adiciona preenchimento horizontal de 20px */
+}
+
+header .logo {
+    height: 50px; /* Define a altura do logo */
+}
+
+/* Menu de navegação */
+nav ul {
+    display: flex; /* Organiza os itens da lista em linha (horizontalmente) */
+    list-style: none; /* Remove os marcadores das listas */
+    gap: 20px; 
+    padding: 0; 
+    margin: 0;  
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white; /* Define a cor do texto como branca */
+    font-size: 18px; /* Define o tamanho da fonte do link */
+    
+
+    position: relative; /* Define a posição como relativa para que o pseudo-elemento funcione corretamente */
+
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a::after {
+    content: ""; /* Cria um pseudo-elemento vazio */
+    position: absolute; /* Posiciona o pseudo-elemento de forma absoluta em relação ao link */
+    left: 0; /* Alinha o pseudo-elemento à esquerda */
+    bottom: -5px; /* Posiciona o pseudo-elemento 5px abaixo do link */
+    width: 0; /* Define a largura inicial do pseudo-elemento como 0 */
+    height: 3px; /* Define a altura do pseudo-elemento */
+    background-color: red; /* Define a cor de fundo como vermelha */
+    transition: width 0.3s ease-in-out; /* Adiciona uma transição suave na largura */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Quando o mouse passa sobre o link, a largura do pseudo-elemento aumenta para 100% */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+    display: none; /* Esconde o menu hambúrguer por padrão */
+    flex-direction: column; /* Organiza as barras do menu em coluna */
+    justify-content: space-between; /* Coloca as barras do menu com o máximo de espaço entre elas */
+    height: 21px; /* Define a altura do menu */
+    width: 30px; /* Define a largura do menu */
+    cursor: pointer; /* Muda o cursor para uma mãozinha quando passar sobre o menu */
+}
+
+.menu-toggle .bar {
+    background-color: #FF0202; /* Define a cor das barras do menu como vermelha */
+    height: 3px; /* Define a altura das barras */
+    width: 100%; /* Define a largura das barras como 100% do menu */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none; /* Esconde o menu de navegação tradicional em telas pequenas */
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o menu hambúrguer em telas pequenas */
+    }
+
+    nav.active {
+        display: flex; /* Exibe o menu de navegação quando a classe 'active' é aplicada */
+        flex-direction: column; /* Organiza os itens do menu em uma coluna */
+        align-items: center; /* Alinha os itens do menu no centro */
+        background-color: #2c3e50; /* Define o fundo do menu hambúrguer */
+        position: absolute; /* Coloca o menu em uma posição absoluta na tela */
+        top: 0; /* Alinha o menu ao topo da tela */
+        left: 0; /* Alinha o menu à esquerda da tela */
+        width: 100%; /* Faz o menu ocupar toda a largura da tela */
+        height: 100vh; /* Faz o menu ocupar toda a altura da tela */
+        z-index: 1000; /* Coloca o menu acima de outros elementos */
+        justify-content: center; /* Centraliza os itens do menu verticalmente */
+    }
+
+    nav ul {
+        flex-direction: column; /* Organiza os itens do menu em coluna */
+        align-items: center; /* Alinha os itens no centro */
+        height: 100%; /* Faz o menu ocupar toda a altura disponível */
+    }
+
+    nav ul li {
+        margin-bottom: 20px; /* Adiciona espaço entre os itens do menu */
+    }
+}
