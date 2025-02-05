@@ -2,7 +2,9 @@
 .container_home {
     display: flex;
     gap: 80px;
-    margin-top: 80px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #FF0202; /* Adiciona uma borda inferior vermelha de 2px */
 }
 
 .col_avatar img {
