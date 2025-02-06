@@ -1,0 +1,40 @@
+/* Seção inicial */
+.container_home {
+    display: flex;
+    gap: 80px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #FF0202; /* Adiciona uma borda inferior vermelha de 2px */
+}
+
+.col_avatar img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 3px solid #FF0202;
+    box-shadow: 0 4px 6px rgba(236, 231, 231, 0.1);
+    padding: 15px;
+}
+
+.col_introducion h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 48px;
+    color: #FF0202;
+    font-weight: 700;
+}
+
+.col_introducion p,
+.col_introducion span {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.col_introducion p {
+    color: white;
+}
+
+.col_introducion span {
+    color: #FF0202;
+}

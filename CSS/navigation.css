@@ -1,0 +1,43 @@
+/* ======= NAVIGATION ============================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+
+    background: rgba(9, 9, 10, 0.6);
+    border-bottom: 1px solid rgba(114, 114, 126, 0.5);
+
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+nav .logo {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+nav .menu {
+    position: fixed;
+}
+
+nav .wrapper {
+    border: 1px solid red;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+ 
+}
+
+.menu ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+}
