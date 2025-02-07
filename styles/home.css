@@ -4,7 +4,7 @@
     gap: 80px;
     margin-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 2px solid #FF0202; /* Adiciona uma borda inferior vermelha de 2px */
+    border-bottom: 3px solid rgba(189, 62, 62, 0.5);    
 }
 
 .col_avatar img {
@@ -12,7 +12,7 @@
     height: 250px;
     border-radius: 50%;
     object-fit: contain;
-    border: 3px solid #FF0202;
+    border: 3px solid var(--primary-color);
     box-shadow: 0 4px 6px rgba(236, 231, 231, 0.1);
     padding: 15px;
 }
@@ -20,7 +20,7 @@
 .col_introducion h1 {
     font-family: 'Roboto Slab', serif;
     font-size: 48px;
-    color: #FF0202;
+    color: var(--primary-color);
     font-weight: 700;
 }
 
@@ -36,5 +36,5 @@
 }
 
 .col_introducion span {
-    color: #FF0202;
+    color: var(--primary-color);
 }

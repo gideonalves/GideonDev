@@ -3,12 +3,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #FF0202;
+    --secondary-color:  #01080E;
+    --tertiary-color: #2c3e50;
+}
+
+html {
+    scroll-padding-top: 200px;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: #01080E;
+    background: var(--secondary-color);
     color: white;
 }
 
@@ -17,4 +29,22 @@ body {
     max-width: 1160px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+.header-title h2 {
+    position: relative;
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+.header-title h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    width: 65%;
+    height: 8px;
+    border-radius: 50px;
+    z-index: -1;
+    background: white;
 }

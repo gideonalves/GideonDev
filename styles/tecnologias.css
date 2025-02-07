@@ -3,11 +3,8 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
-}
-
-h2 {
-    font-size: 48px;
-    color: red;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .tech-icons {
@@ -15,7 +12,7 @@ h2 {
     gap: 80px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .tech-icon {
     width: 65px;
@@ -41,7 +38,7 @@ h2 {
 }
 
 .container_tecnologia .btn-ptf:hover {
-    background-color: #FF0202;
+    background-color: var(--primary-color);
     transform: scale(1.05);
     cursor: pointer;
 }
