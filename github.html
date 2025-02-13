@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub API</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #profile { margin: 20px; }
+        #repos { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Meu GitHub</h1>
+    <div id="profile"></div>
+    <h2>Repositórios</h2>
+    <ul id="repos"></ul>
+
+    <script>
+        const username = "gideonalves";
+        
+        async function fetchGitHubData() {
+            try {
+                // Buscar dados do perfil
+                let response = await fetch(`https://api.github.com/users/${username}`);
+                let userData = await response.json();
+                document.getElementById("profile").innerHTML = `
+                    <img src="${userData.avatar_url}" width="100" alt="Avatar">
+                    <p><strong>${userData.name}</strong></p>
+                    <p>${userData.bio || "Sem biografia"}</p>
+                    <p><a href="${userData.html_url}" target="_blank">Ver Perfil</a></p>
+                `;
+                
+                // Buscar repositórios
+                response = await fetch(`https://api.github.com/users/${username}/repos`);
+                let reposData = await response.json();
+                
+                let reposList = reposData.map(repo => `
+                    <li>
+                        <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                    </li>
+                `).join("");
+                
+                document.getElementById("repos").innerHTML = reposList;
+            } catch (error) {
+                console.error("Erro ao buscar dados do GitHub", error);
+            }
+        }
+        
+        fetchGitHubData();
+    </script>
+</body>
+</html>

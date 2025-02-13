@@ -1,40 +1,114 @@
 /* Seção inicial */
-.container_home {
+
+#home {
     display: flex;
-    gap: 80px;
-    margin-top: 50px;
-    padding-bottom: 50px;
-    border-bottom: 3px solid rgba(189, 62, 62, 0.5);    
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid rgba(189, 62, 62, 0.5);
 }
 
-.col_avatar img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: contain;
-    border: 3px solid var(--primary-color);
-    box-shadow: 0 4px 6px rgba(236, 231, 231, 0.1);
-    padding: 15px;
+.intro {
+    padding: 30px 0;
+    display: flex;   
+    flex-direction: column; 
+    align-items: center;
+    gap: 50px;
 }
 
-.col_introducion h1 {
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-text h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 64px;
+    color: white;
+
+    font-weight: 700;
+    position: relative;
+}
+
+.intro-text h1::before {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url('../assets/icons/Detalhe.svg') no-repeat center;
+    position: absolute; 
+    top: -15px;
+    left: -52px;
+    z-index: -1;
+}
+
+.intro-text h1 span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 64px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.name-highlight {
+    color: var(--primary-color);
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.intro-text p {
+    color: white;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.intro-text p:last-of-type {
+    margin-bottom: 50px; /* Ajuste o valor conforme necessário */
+}
+
+/* --------------- HABILIDADES TÉCNICAS -------------- */
+.section-header h2 {    
     font-family: 'Roboto Slab', serif;
     font-size: 48px;
     color: var(--primary-color);
     font-weight: 700;
 }
 
-.col_introducion p,
-.col_introducion span {
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
+.technology-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
 }
 
-.col_introducion p {
+.technology-item {
+    border: 2px solid #e60000; /* Vermelho */
+    border-radius: 50%; /* Torna a borda circular */
+    width: 120px; /* Largura fixa */
+    height: 120px; /* Altura fixa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.tech-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.technology-item span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    /* font-weight: bold; */
     color: white;
 }
 
-.col_introducion span {
-    color: var(--primary-color);
+.technology-item:hover {
+    border-color: #ffcc00; /* Cor de borda ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Efeito de brilho */
 }

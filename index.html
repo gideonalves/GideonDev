@@ -20,8 +20,7 @@
             <a href="/">
                 <img src="assets/img/Logo.svg" alt="Logo GideonDev" class="logo">
             </a>
-           
-            
+                       
             <nav class="nav-desktop">
                 <ul>
                     <li><a href="#home">Início</a></li>
@@ -33,47 +32,56 @@
         </div>
     </header>
 
-    <main>
+    <main class="main-content">
         <section id="home">
-            <div class="container container_home">
-                <div class="col_avatar">
-                    <img src="assets/img/gideonsemfundo.jpg" alt="Avatar" class="avatar">
-                </div>
-                <div class="col_introducion">
-                    <h1>Desenvolvedor Web</h1>
+            <div class="intro">
+                <div class="intro-text">
+                    <h1>Desenvolvedor <span>Web</span></h1>
                     <p>Olá, eu sou o</p>
-                    <span>Gideon Alves :)</span>
+                    <span class="name-highlight">Gideon Alves :)</span>
                     <p>Desenvolvedor Front-End</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="Tecnologias">
+                    <button class="btn-primary" onclick="location.href='#portfolio'">Ver Projetos</button>
+                </div>
+
+               
+            </div> 
+            
+            <div class="intro">
+                <div class="section-header">
+                    <h2>Habilidades Técnicas</h2>
+                </div>
+    
+                <div class="technology-list">
+                    <div class="technology-item">
+                        <img src="assets/icons/icon-react.svg" alt="React" class="tech-icon">
+                        <span>React.js</span>
+                    </div>
+                    <div class="technology-item">
+                        <img src="assets/icons/icon-html.svg" alt="HTML" class="tech-icon">
+                        <span>HTML</span>
+                    </div>
+                    <div class="technology-item">
+                        <img src="assets/icons/icon-css.svg" alt="CSS" class="tech-icon">
+                        <span>CSS</span>
+                    </div>
+                    <div class="technology-item">
+                        <img src="assets/icons/icon-javascript.svg" alt="JavaScript" class="tech-icon">
+                        <span>JavaScript</span>
+                    </div>
+                </div>    
+            </div>
+        </section>      
+  
+        <section id="portfolio">
             <div class="container container_tecnologia">
                     <div class="header-title">
-                        <h2>Tecnologias</h2>
+                        <h2>Portfólio</h2>
                     </div>
 
-                    <div class="tech-icons">
-                        <div class="img-icon">
-                            <img src="assets/icons/React.svg" alt="HTML" class="tech-icon">
-                            <span>React.js</span>
-                        </div>
-                        <div class="img-icon">
-                            <img src="assets/icons/HTML.svg" alt="CSS" class="tech-icon">
-                            <span>HTML</span>
-                        </div>
-                        <div class="img-icon">
-                            <img src="assets/icons/CSS.svg" alt="JavaScript" class="tech-icon">
-                            <span>CSS</span>
-                        </div>
-                        <div class="img-icon">
-                            <img src="assets/icons/javascript.svg" alt="React" class="tech-icon">
-                            <span>JavaScript</span>
-                        </div>
+                    <div class="cards">
+                 
                     </div>
-
-                    <button class="btn-ptf">Conheça meu Portfólio</button>
             </div>
         </section>
     </main>
@@ -83,6 +91,7 @@
     </footer>
 
     <script src="./main.js"></script>
+    <script src="./github.js"></script>
 
 </body>
 </html>
