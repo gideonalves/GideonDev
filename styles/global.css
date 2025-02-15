@@ -39,24 +39,8 @@ body {
 .header-title h2 {
     position: relative;
     font-size: 48px;
-    color: var(--primary-color);
-}
-
-.header-title h2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 12px;
-    width: 65%;
-    height: 8px;
-    border-radius: 50px;
-    z-index: -1;
-    background: white;
-}
-.header-title h2 {
-    position: relative;
-    font-size: 48px;
     color: white;
+    margin-bottom: 30px;
 }
 
 .header-title h2::before {
@@ -64,7 +48,7 @@ body {
     display: block;
     position: absolute;
     bottom: 12px;
-    width: 65%;
+    width: 12%;
     height: 8px;
     border-radius: 50px;
     z-index: -1;

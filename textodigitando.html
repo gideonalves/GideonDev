@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Digitando</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background: black;
+            margin-left: 5px;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <p id="texto"></p><span class="cursor"></span>
+
+    <script>
+        const texto = "Olá, esse é um efeito de digitação!";
+        let i = 0;
+
+        function digitar() {
+            if (i <= texto.length) {
+                document.getElementById("texto").innerHTML = texto.substring(0, i);
+                i++;
+                setTimeout(digitar, 100); // Tempo entre cada letra (100ms)
+            }
+        }
+
+        digitar(); // Inicia o efeito
+    </script>
+
+</body>
+</html>
