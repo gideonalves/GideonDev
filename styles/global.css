@@ -24,6 +24,10 @@ body {
     color: white;
 }
 
+section {
+    padding-top: 40px;
+}
+
 /* Container padrão */
 .container {
     max-width: 1160px;

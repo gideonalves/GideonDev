@@ -1,5 +1,4 @@
 #portfolio {
-    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,25 +6,21 @@
     padding-bottom: 50px;
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px; /* Ajustado o espaçamento para 30px */
-    justify-content: center;
-    width: 100%;
-    max-width: 1160px; /* Ajustado para garantir que a largura máxima da página seja respeitada */
-    margin: 0 auto; /* Centraliza os cards */
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 58px;
 }
 
 .card {
+    width: 550px;
     background: #fffdfd15;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border: 1px solid red;
-    display: flex
-;
+    border: 1px solid var(--primary-color);
+    display: flex;
     flex-direction: column;
     align-items: center;
 }

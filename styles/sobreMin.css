@@ -1,0 +1,45 @@
+.container_tecnologia {
+    margin-bottom: 50px;
+}
+
+.sobre-mim-text {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 30px;
+}
+
+.sobre-mim-text p::before {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url('../assets/icons/Detalhe.svg') no-repeat center;
+    position: absolute;
+    top: -35px;
+    left: -27px;
+    z-index: -1;
+}
+
+.container-estudos {
+    display: flex;
+    gap: 75px;
+}
+
+.box {
+    border: 2px solid #ff0202;
+    border-radius: 12px;
+    background: hsla(0, 46%, 75%, 0.404);
+    padding: 20px;
+    width: 542px;
+    text-align: center;
+}
+
+.header-title h3 {
+    font-size: 26px;
+    color: white;
+    margin-bottom: 30px;
+}
+
