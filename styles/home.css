@@ -67,6 +67,11 @@
     margin-bottom: 50px; /* Ajuste o valor conforme necessário */
 }
 
+.btns {
+    display: flex;
+    gap: 30px;
+}
+
 /* --------------- HABILIDADES TÉCNICAS -------------- */
 .section-header h2 {    
     font-family: 'Roboto Slab', serif;
