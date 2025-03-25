@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - GideonDev</title>
+
+   
+        <!-- Fonte do Google -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/css/ionicons.min.css">
+
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body onscroll="onScroll()">
+    <nav id="navigation">
+        <div class="wrapper">
+            <a class="logo" href="#home">
+                <svg width="133" height="46" viewBox="0 0 180 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M98.39 16.5C99.87 16.5 100.89 16.83 101.45 17.49C102.03 18.13 102.32 19.11 102.32 20.43V35.07C102.32 36.45 102 37.45 101.36 38.07C100.72 38.69 99.73 39 98.39 39H87.8V36.96H89.69V18.54H87.8V16.5H98.39ZM99.86 18.54H92.15V36.96H99.86V18.54ZM105.605 26.94C105.605 24.96 106.635 23.97 108.695 23.97H113.765C114.745 23.97 115.455 24.16 115.895 24.54C116.335 24.92 116.555 25.62 116.555 26.64V29.43L108.005 34.83V36.96H114.185V35.22H116.555V36.81C116.555 37.41 116.365 37.93 115.985 38.37C115.625 38.79 115.015 39 114.155 39H108.005C107.145 39 106.525 38.79 106.145 38.37C105.785 37.93 105.605 37.41 105.605 36.81V26.94ZM108.005 32.4L114.155 28.53V26.04H108.005V32.4ZM124.171 24V26.04H122.701L125.701 36.96L128.761 26.04H127.291V24H132.841V26.04H131.041L127.411 39H124.081L120.421 26.04H118.651V24H124.171Z" fill="#FF0202"/>
+                    <path d="M1.8 9.95C1.8 7.65 2.87 6.5 5.01 6.5H14.46V12.05H12.06V8.54H4.26V26.96H12.06V19.94L7.89 22.55V20.36L14.46 16.25V29H5.55C4.13 29 3.16 28.74 2.64 28.22C2.08 27.68 1.8 26.7 1.8 25.28V9.95ZM22.1098 26.96H24.0598V29H17.7598V26.96H19.6498V16.04H17.7598V14H22.1098V26.96ZM20.8798 8.48C21.2998 8.48 21.6498 8.64 21.9298 8.96C22.2298 9.26 22.3798 9.63 22.3798 10.07C22.3798 10.49 22.2298 10.85 21.9298 11.15C21.6498 11.43 21.2898 11.57 20.8498 11.57C20.4298 11.57 20.0698 11.43 19.7698 11.15C19.4898 10.85 19.3498 10.49 19.3498 10.07C19.3498 9.63 19.4998 9.26 19.7998 8.96C20.0998 8.64 20.4598 8.48 20.8798 8.48ZM39.8639 26.93V29H35.5139V25.55L30.3239 28.82C29.7039 29.14 29.1139 29.3 28.5539 29.3C28.0139 29.3 27.5739 29.1 27.2339 28.7C26.9139 28.3 26.7539 27.84 26.7539 27.32V16.82C26.7539 15.9 26.8939 15.27 27.1739 14.93C27.6539 14.31 28.4139 14 29.4539 14H35.5139V8.54H33.5339V6.5H37.9739V26.93H39.8639ZM35.5139 16.04H29.1539V27.11L35.5139 23.15V16.04ZM42.5742 16.94C42.5742 14.96 43.6042 13.97 45.6642 13.97H50.7342C51.7142 13.97 52.4242 14.16 52.8642 14.54C53.3042 14.92 53.5242 15.62 53.5242 16.64V19.43L44.9742 24.83V26.96H51.1542V25.22H53.5242V26.81C53.5242 27.41 53.3342 27.93 52.9542 28.37C52.5942 28.79 51.9842 29 51.1242 29H44.9742C44.1142 29 43.4942 28.79 43.1142 28.37C42.7542 27.93 42.5742 27.41 42.5742 26.81V16.94ZM44.9742 22.4L51.1242 18.53V16.04H44.9742V22.4ZM59.0095 29C57.9895 29 57.2695 28.77 56.8495 28.31C56.4295 27.83 56.2195 27.17 56.2195 26.33V16.67C56.2195 15.87 56.3995 15.23 56.7595 14.75C57.1395 14.25 57.8895 14 59.0095 14H64.5595C65.6595 14 66.3995 14.25 66.7795 14.75C67.1595 15.23 67.3495 15.87 67.3495 16.67V26.33C67.3495 27.17 67.1395 27.83 66.7195 28.31C66.2995 28.77 65.5795 29 64.5595 29H59.0095ZM58.6495 26.96H64.9195V16.04H58.6495V26.96ZM80.1347 13.7C81.6947 13.7 82.4747 14.47 82.4747 16.01V26.96H84.3947V29H78.6047V26.96H80.0447V15.8L74.0747 19.55V26.96H75.5447V29H69.7547V26.96H71.6447V16.01H69.7547V14H74.0747V17.12L79.0547 14C79.3747 13.8 79.7347 13.7 80.1347 13.7Z" fill="#F9F9F9"/>
+                    <path d="M144.5 27.475V25.575L155.775 20.15V21.875L146.325 26.525L155.775 31.2V32.925L144.5 27.475ZM167.749 20.15L179.024 25.575V27.475L167.749 32.925V31.2L177.199 26.525L167.749 21.875V20.15Z" fill="white"/>
+                    <path d="M164.95 14.25H166.875L158.6 39.75H156.65L164.95 14.25Z" fill="#FF0202"/>
+                </svg>                        
+            </a>
+
+            <div class="menu">
+                <ul>
+                    <li><a onclick="closeMenu()" href="#home">Início</a></li>
+                    <li><a onclick="closeMenu()" href="#portfolio">Portfólio</a></li>
+                    <li><a onclick="closeMenu()" href="#sobreMim">Sobre mim</a></li>
+                    <li><a onclick="closeMenu()" href="#contato">Contato</a></li>
+                </ul>
+
+                <a class="button" href="#">projetos</a>
+
+                <ul class="social-links">
+                    <li>
+                        <a
+                            target="_blank"
+                            href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.5 6.49997H17.51" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                        </a>
+                    </li>
+
+                    <li>
+                        <a 
+                            target="_blank"
+                            href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                        </a>
+                    </li>
+
+                    <li>
+                        <a 
+                            target="_blank"                          
+                            href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button 
+                aria-expanded="false"
+                aria-label="Abrir menu"
+                onclick="openMenu()"
+                class="open-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 20H30" stroke="hsl(350, 92%, 50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 12H30" stroke="hsl(350, 92%, 50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 28L30 28" stroke="hsl(350, 92%, 50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+            </button>
+
+            <button
+                aria-expanded="true"
+                aria-label="Fechar menu"
+                onclick="closeMenu()"
+                class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="hsl(350, 92%, 50%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                        
+            </button>
+        </div>                          
+    </nav>
+      
+    <!-- Seções Home -->
+    <section id="home">
+        <div class="wrapper">
+            <!-- <div class="home-container"> -->
+                <div class="wrapper-container">
+                    <h1>Desenvolvedor <span>Web</span></h1>
+                    <p>Olá, eu sou o</p>
+                    <p>Gideon Alves</p>
+                    <p>Desenvolvedor Front-End</p>
+                </div>
+    
+                <div class="btns">
+                    <button class="btn-primary" onclick="location.href='#portfolio'">Ver Projetos</button>
+                    <button class="btn-primary" onclick="location.href='#cursos'">Cursos</button>
+                    <button class="btn-primary" onclick="location.href='#certificados'">Certificados</button>
+                </div>
+    
+                <div class="intro">
+                    <div class="section-header">
+                        <h2>Habilidades Técnicas</h2>
+                    </div>
+        
+                    <div class="technology-list">
+                        <div class="technology-item">
+                            <img src="assets/icons/icon-react.svg" alt="React" class="tech-icon">
+                            <span>React.js</span>
+                        </div>
+                        <div class="technology-item">
+                            <img src="assets/icons/icon-html.svg" alt="HTML" class="tech-icon">
+                            <span>HTML</span>
+                        </div>
+                        <div class="technology-item">
+                            <img src="assets/icons/icon-css.svg" alt="CSS" class="tech-icon">
+                            <span>CSS</span>
+                        </div>
+                        <div class="technology-item">
+                            <img src="assets/icons/icon-javascript.svg" alt="JavaScript" class="tech-icon">
+                            <span>JavaScript</span>
+                        </div> 
+                    </div>    
+                </div>
+            <!-- </div> -->
+        </div>    
+    </section>
+
+    <!-- Seções portfolio -->
+    <section id="portfolio">
+        <div class="wrapper">
+            <div class="header-title">
+                <h2>Portfólio</h2>
+            </div>
+
+            <div id="cardsContainer" class="cards-list"></div>
+        </div>
+    </section>
+
+     <!-- Seções Sobre mim -->
+    <section id="sobreMim">
+        <div class="wrapper">
+            <div class="header-title">
+                <h2>Quem sou?</h2>
+            </div>
+
+            <div class="sobre-mim-text">
+                <p>Muito prazer, me chamo Gideon Alves, sou Formado em Desenvolvimento de sistemas<br>
+                    Amo programação e tecnologia, apaixonado pela arte de programar, decidi seguir<br> 
+                    carreira pelo ramo do desenvolvimento web, e me especializei em<br>
+                    Javascript + React.js e em todo o seu ecossistema.</p>
+            </div>
+
+            <div class="container-estudos">
+                <div class="box">
+                    <div class="header-title">
+                        <h3>Formação Acadêmica</h3>
+                    </div>
+                    <p>Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas<br>Centro Universitário Internacional Uninter</p>
+                </div>
+                <div class="box">
+                    <div class="header-title">
+                        <h3>Estudo Contínuo</h3>
+                    </div>
+                  
+                    <p>HTML | CSS | JAVASCRIPT | REACT.JS<br>SQL | NODE | TYPESCRIPT</p>
+                </div>
+            </div>      
+        </div>
+    </section>
+
+    <section id="cursos">
+        <div class="wrapper">
+            <div class="header-title">
+                <h2>Cursos</h2>
+            </div>
+
+            <div class="list-course">
+                <div class="course-container">
+                    <div class="circle">1</div>
+                    <div class="course-box">React: como os componentes funcionam | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">2</div>
+                    <div class="course-box">React: desenvolvendo em React Router com JavaScript | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">3</div>
+                    <div class="course-box">React: praticando React com Js | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">4</div>
+                    <div class="course-box">React: Hooks, Contextos e boas práticas | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">4</div>
+                    <div class="course-box">React: Function Components, uma abordagem moderna | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">5</div>
+                    <div class="course-box">React: como os componentes funcionam | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">6</div>
+                    <div class="course-box">React: desenvolvendo com JavaScript | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">7</div>
+                    <div class="course-box">JavaScript: criando requisições | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">8</div>
+                    <div class="course-box">JavaScript: consumindo e tratando dados de uma API | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">8</div>
+                    <div class="course-box">JavaScript na Web: manipule o DOM com JavaScript | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">9</div>
+                    <div class="course-box">JavaScript: validando formulários | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">10</div>
+                    <div class="course-box">JavaScript: métodos de array | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">11</div>
+                    <div class="course-box">JavaScript: explorando a linguagem | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">11</div>
+                    <div class="course-box">Layouts Responsivos: trabalhando com layouts mobile | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">12</div>
+                    <div class="course-box">HTML5 e CSS3 parte 4: avançando no CSS | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">13</div>
+                    <div class="course-box">HTML5 e CSS3 parte 3: trabalhando com formulários e tabelas | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">14</div>
+                    <div class="course-box">Flexbox: posicione elementos na tela | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">15</div>
+                    <div class="course-box">Arquitetura CSS: descomplicando os problemas | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">16</div>
+                    <div class="course-box">JavaScript e HTML: desenvolva um jogo e pratique lógica de programação
+                        | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">17</div>
+                    <div class="course-box">HTML5 e CSS3 parte 2: posicionamento, listas e navegação
+                        | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">18</div>
+                    <div class="course-box">HTML5 e CSS3 parte 2: posicionamento, listas e navegação
+                        | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">19</div>
+                    <div class="course-box">JavaScript e HTML: pratique lógica com desenhos, animações e um jogo
+                        | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">20</div>
+                    <div class="course-box">Git e Github: controle e compartilhe seu código | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">21</div>
+                    <div class="course-box">Organização de Equipes Ágeis: os papéis existentes em uma equipe | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">22</div>
+                    <div class="course-box">Gestão Ágil: liderando a mudança em um ambiente de agilidade | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">23</div>
+                    <div class="course-box">LinkedIn: como fazer o seu perfil trabalhar para você | Alura</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">24</div>
+                    <div class="course-box">Front End & UX/UI Design | Origamid</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">25</div>
+                    <div class="course-box">HTML E CSS | Origamid</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">26</div>
+                    <div class="course-box">Bootstrap4 | Origamid</div>
+                </div>
+                <div class="course-container">
+                    <div class="circle">27</div>
+                    <div class="course-box">CSS Flexbox | Origamid</div>
+                </div>     
+            </div>
+        </div>    
+    </section>
+
+    <section id="certificados">
+        <div class="header-title">
+            <h3>Certificados</h3>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./assets/certificados/Certificado-flexbox-origamid .png" alt="Certificado 1">
+                <div class="text">Certificado 1</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="./assets/certificados/Certificado-html-css-origamid.png" alt="Certificado 3">
+                <div class="text">Certificado 3</div>
+            </div>
+    
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+      <!-- Seções Contato -->
+    <section id="contato">
+        <div class="wrapper">
+            <div class="header-title">
+                <h2>Contato</h2>
+            </div>
+
+            <p>Estou aberto a novas oportunidades de trabalho, projetos freelance e colaborações criativas. <br>Vamos conversar e transformar ideias em realidade!</p>
+        
+            <div class="contatos">
+                <a href="mailto:gideonam@yahoo.com.br" class="button">
+                    <img src="./assets/icons/email.svg" alt="Email">
+                    <span>gideonam@yahoo.com.br</span>
+                </a>
+                <a href="https://www.linkedin.com/in/gideon-alves/" target="_blank" class="button">
+                    <img src="./assets/icons/linkedin.svg" alt="LinkedIn">
+                    <span>linkedin.com/in/gideon-alves</span>
+                </a>
+                <a href="https://github.com/GideonAlves" target="_blank" class="button">
+                    <img src="./assets/icons/github.svg" alt="GitHub">
+                    <span>github.com/GideonAlves</span>
+                </a>
+            </div>
+        </div>    
+    </section>
+    <footer>
+        <p>&copy; 2025 GideonDev. Todos os direitos reservados.</p>
+    </footer>
+
+      <!-- Botão Voltar ao Topo -->
+    <button id="btnVoltarTopo" title="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- ScrollReavel lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/github.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/btnScroll.js"></script>
+</body>
+</html>
+
+<!-- parei em 01:09:06  /////   00:29:48 -->

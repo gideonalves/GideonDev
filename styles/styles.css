@@ -1,0 +1,766 @@
+/* Reset e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: hsl(350, 92%, 50%);
+    --secondary-color:  #01080E;
+    --tertiary-color: #2c3e50;
+    --quaternary-color: #FFFFFF;
+
+    font-size: 62.5%;
+
+    --nav-height: 7.2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--quaternary-color);
+    background: var(--secondary-color);
+
+    overflow: overlay;
+}
+
+.wrapper {
+    width: 37.5rem;
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.header-title {
+    color: var(--quaternary-color);
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.header-title h2 {
+    display: inline-block; /* Garante que o pseudo-elemento se alinhe corretamente */
+    position: relative; /* Permite que o pseudo-elemento seja posicionado em relação ao h2 */
+}
+
+.header-title h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0; /* Ajuste conforme necessário */
+    left: 0; /* Alinha a barra à esquerda do texto */
+    width: 70%; /* A barra terá a mesma largura que o texto */
+    height: 8px;
+    border-radius: 50px;
+    background: var(--primary-color);
+    z-index: 1; /* Garante que a barra fique acima do fundo, mas abaixo do texto */
+}
+
+/*================= HEADER ==================== */
+header {
+    padding-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: calc(108rem + var(--nav-height));
+    background-color: rgb(36, 39, 39);
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/*================= NAVIGATION ==================== */
+nav {
+    display: flex;
+
+    height: var(--nav-height);
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    border-bottom: 3px solid rgba(189, 62, 62, 0.5);
+
+
+    /* left: 50%;
+    transform: translateX(-50%); */
+
+    z-index: 100;
+}
+
+nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.scroll {
+    border-bottom: 3px solid rgba(189, 62, 62, 0.5);
+    background-color:  rgba(83, 10, 10, 0.8);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Logo */
+nav.scroll .logo path {
+   fill: var(--quaternary-color);
+
+}
+/* Menu Hamburguer */
+nav.scroll button path {
+   stroke: var(--quaternary-color);
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/*================= MENU-EXPANDED ==================== */
+body.menu-expanded {
+    overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+    visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu {
+    transform: translateY(100%);
+
+}
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: var(--nav-height);
+
+    transition: transform 300ms;
+    transform: translateY(0);
+}
+
+/* body.menu-expanded nav {
+    position: relative;
+} */
+
+.menu ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    margin-top: 6rem;
+
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu .button {
+    /* background: white; */
+    border: 3px solid white;
+    border-radius: 4rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: white;
+
+    display: inline-block;
+    padding: 16px 32px;
+
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+    position: relative;
+    z-index: 100;
+}
+
+body.menu-expanded .logo path {
+    fill: var(--quaternary-color);
+ }
+ 
+body.menu-expanded button path {
+    stroke: var(--quaternary-color);
+ }
+
+/*================= HOME ==================== */
+
+.home-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section {
+    padding-block: 10rem;
+}
+
+#home .wrapper-container h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    line-height: 130%;
+    color: var(--quaternary-color);
+    font-weight: 700;
+
+    margin-bottom: 1.4rem;
+    position: relative;
+}
+
+#home .wrapper-container h1::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url(../assets/icons/Detalhe.svg) no-repeat center;
+    position: absolute;
+    top: -32px;
+    left: -17px;
+    z-index: -1;
+}
+
+#home .wrapper-container p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    color: var(--quaternary-color);
+    font-weight: 700;
+
+    margin-bottom: 1.6rem;
+}
+
+#home .wrapper-container p:nth-child(3) {
+    color: var(--primary-color);
+}
+
+#home span {
+    color: var(--quaternary-color);
+    font-weight: 700;
+
+}
+
+/*========== BUTTON ========== */
+.btns {
+    display: flex;
+    gap: 3.5rem;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.btn-primary {
+    width: 9rem;
+    height: 3.125rem;
+    border: 0.125rem solid var(--primary-color);
+    border-radius: 0.75rem;
+    background: none;
+    color: var(--primary-color);
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de brilho */
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 200%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.6s ease-in-out;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Animação de gradiente no hover */
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de borda */
+.btn-primary:hover {
+    border-color: var(--secondary-color);
+}
+
+/* Efeito de clique mais fluído */
+.btn-primary:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+/* --------------- HABILIDADES TÉCNICAS -------------- */
+.section-header h2 {    
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: var(--primary-color);
+
+    line-height: 130%;
+    font-weight: 700;
+
+    margin-bottom: 2.4rem;
+    
+}
+
+.technology-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.technology-item {
+    /* border: 2px solid #e60000; 
+    border-radius: 50%; */
+    /* width: 7.813rem; 
+    height: 7.813rem;  */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.tech-icon {
+    width: 3.875rem;
+    height: 3.875rem;
+    margin-bottom: 8px;
+}
+
+.technology-item span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+
+    /* font-weight: bold; */
+    color: white;
+}
+
+.technology-item:hover {
+    border-color: #ffcc00; /* Cor de borda ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Efeito de brilho */
+}
+
+/*================= PORTFÓLIO ==================== */
+#cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.card {
+    max-width: 100%;
+    background: #fffdfd15;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.icon-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(86%) saturate(385%) hue-rotate(357deg) brightness(94%) contrast(90%);
+}
+
+/* Estilos para o ícone do GitHub */
+.github-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(30%) sepia(100%) saturate(7500%) hue-rotate(-15deg) brightness(95%) contrast(95%);
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 2px solid var(--primary-color);
+
+}
+
+
+/*================= SOBRE MIM ==================== */
+#sobreMim .sobre-mim-text {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#sobreMim .container-estudos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sobreMim .box {
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 10px;
+    background: hsla(0, 46%, 75%, 0.404);
+}
+
+#sobreMim .header-title {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#sobreMim .sobre-mim-text p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: white;
+    margin-bottom: 15px;
+    
+    position: relative;
+}
+
+.sobre-mim-text p::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+height: 100px;
+    top: -45px;
+    left: -16px;
+    z-index: -1;
+    background: url('../assets/icons/Detalhe.svg') no-repeat center;
+
+}
+
+
+/*================= CURSOS ==================== */
+
+#cursos .list-course {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#curso {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os cursos */
+    padding: 20px;
+}
+
+.course-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre círculo e caixa de curso */
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid red; /* Borda vermelha */
+    border-radius: 50%; /* Formato arredondado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(235, 20, 20); /* Cor do texto */
+}
+
+.course-box {
+    flex: 1; /* Ocupa o restante do espaço disponível */
+    width: 272px;
+    padding: 10px;
+    border: 1px solid red; /* Borda de 1px na cor vermelha */
+    border-radius: 12px; /* Borda arredondada */
+    color: white; /* Cor do texto */
+}
+
+
+/*================= CERTIFICADOS ==================== */
+.slideshow-container {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 8px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.text {
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 10px 10px;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ff0000;
+}
+
+/*================= CONTATO ==================== */
+
+#contato p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fcf3f3;
+    margin-bottom: 30px;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento maior entre os itens */
+    align-items: center; /* Centraliza os links */
+}
+
+.contatos a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre ícone e texto */
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(180, 64, 64);
+    border: 2px solid red;
+    padding: 12px 20px; /* Mais padding para dar destaque ao botão */
+    border-radius: 8px;
+    width: fit-content;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contatos a:hover {
+    transform: scale(1.05);
+}
+
+.contatos img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/*================= FOOTER ==================== */
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--tertiary-color);
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+
+/* Botão Voltar ao Topo */
+#btnVoltarTopo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: hsl(350, 92%, 50%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#btnVoltarTopo:hover {
+    background-color: hsl(350, 92%, 40%);
+    transform: translateY(-3px);
+}
+
+#btnVoltarTopo.visible {
+    opacity: 1;
+    visibility: visible;
+}
