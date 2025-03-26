@@ -376,6 +376,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .technology-item {
@@ -409,6 +410,22 @@ section {
 .technology-item:hover {
     border-color: #ffcc00; /* Cor de borda ao passar o mouse */
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Efeito de brilho */
+}
+
+.btn-portfolio {
+    width: 100%;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 0.125rem solid var(--primary-color);
+    border-radius: 0.75rem;
+    height: 3.125rem;
+    color: white;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /*================= PORTFÓLIO ==================== */
@@ -463,11 +480,10 @@ section {
     padding: 8px 12px;
     border-radius: 12px;
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     cursor: pointer;
-    font-weight: bold;
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     text-align: center;
     display: flex;
     align-items: center;
@@ -484,7 +500,6 @@ section {
 .icon-btn img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) saturate(100%) invert(27%) sepia(86%) saturate(385%) hue-rotate(357deg) brightness(94%) contrast(90%);
 }
 
 /* Estilos para o ícone do GitHub */
@@ -499,7 +514,7 @@ section {
     align-items: center;
     padding: 8px 12px;
     border-radius: 12px;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 
 }
 
