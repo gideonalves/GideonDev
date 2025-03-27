@@ -38,7 +38,7 @@ body {
 }
 
 .wrapper {
-    width: 37.5rem;
+    width: min(50rem, 100% );
     margin-inline: auto;
     padding-inline: 2.4rem;
 }
@@ -137,6 +137,11 @@ nav button {
     cursor: pointer;
 }
 
+nav .menu,
+nav .close-menu {
+    position: fixed;
+}
+
 
 
 /*================= MENU-EXPANDED ==================== */
@@ -167,7 +172,6 @@ body.menu-expanded .close-menu {
 }
 
 body.menu-expanded .menu {
-    position: fixed;
     top: 0;
     left: 0;
     background: var(--primary-color);
@@ -244,12 +248,12 @@ body.menu-expanded button path {
 
 /*================= HOME ==================== */
 
-.home-container {
+/* .home-container {
     border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: 50px;
-}
+} */
 
 section {
     padding-block: 12rem;
@@ -292,9 +296,8 @@ section {
 }
 
 #home span {
-    color: var(--quaternary-color);
+    color: var(--primary-color);
     font-weight: 700;
-
 }
 
 /*========== BUTTON ========== */
@@ -558,7 +561,7 @@ section {
     display: block;
     position: absolute;
     width: 100px;
-height: 100px;
+    height: 100px;
     top: -45px;
     left: -16px;
     z-index: -1;
@@ -779,3 +782,156 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
+/*================= RESPONSIVIDADE ==================== */
+@media (min-width: 1024px) {
+
+    /*================= GERAL ==================== */
+    .wrapper {
+        width: min(112rem, 100%);
+        
+    }
+    /*================= NAVIGATION ==================== */
+    /* RESET */
+        nav#navigation .wrapper * {
+            margin: 0;
+            padding: 0;
+            visibility: initial;
+            display: initial;
+            opacity: initial;
+            flex-direction: initial;
+            position: initial;
+            font-size: initial;
+            transform: initial;
+            color: initial;
+            background-color: initial;
+            font-weight: initial;
+        }
+
+        nav#navigation .close-menu, 
+        nav#navigation .open-menu,
+        nav#navigation .social-links {
+            display: none;
+        }
+
+        nav#navigation .menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav#navigation .menu ul:nth-child(1) {
+            display: flex;
+            gap: 3.2rem;
+        }
+
+        nav#navigation .menu ul li a {
+            color: var(--quaternary-color);
+        }
+        /* some com o button projetos */
+        nav#navigation .menu a:nth-child(2) {
+            display: none;
+        }
+
+        .btn-portfolio {
+            display: none;
+        }
+
+        nav#navigation.scroll .menu ul li a {
+            color: yellow;
+        }
+
+        nav#navigation .menu li a:hover {
+            transition: opacity .4s;
+        }
+
+        nav#navigation .menu li a:hover {
+            opacity: 1;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        nav#navigation .menu li a::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: var(--primary-color);
+            left: -0.5rem;
+
+            display: block;
+
+            transition: width 0.2s;
+        }
+
+        nav#navigation.scroll .menu li a::after {
+            background-color: green;
+        }
+
+        nav#navigation .menu li a:hover::after {        
+            padding-inline: 0.8rem;
+            width: 100%;
+            
+        }
+
+    /*================= HOME ==================== */
+    #home .wrapper-container h1 {
+        font-size: 5rem;
+        letter-spacing: 4px;
+        position: relative;
+    }
+    
+    #home .wrapper-container h1::before {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -32px;
+        left: -40px;
+        z-index: -1;
+    }
+
+    #home .wrapper .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home .wrapper p {
+        color: white;
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    #home .wrapper .btns {
+        display: flex;
+        gap: 3.5rem;
+    
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #home .wrapper .btn-primary {
+        width: 19rem;
+        height: 5.125rem;
+        border-radius: 0.75rem;
+        font-size: 2.125rem;
+    }
+
+    #home .wrapper .technology-list {
+        display: flex;
+        gap: 16rem;
+        margin-bottom: 30px;
+    }
+
+    #home .wrapper .technology-list span { 
+        color: white;
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+/* aula 5 00:54:34 */
