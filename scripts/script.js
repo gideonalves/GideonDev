@@ -37,6 +37,23 @@ document.addEventListener("DOMContentLoaded", function () {
     type();
 });
 
+// Contador de visualizações usando CountAPI
+document.addEventListener("DOMContentLoaded", function () {
+    const viewCounterElement = document.getElementById("view-counter");
+
+    // Substitua 'gideondev-portfolio' por um namespace único para o seu site
+    const namespace = "gideondev-portfolio";
+    const key = "page-views";
+
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+        .then(response => response.json())
+        .then(data => {
+            if (viewCounterElement) {
+                viewCounterElement.textContent = `Visualizações: ${data.value}`;
+            }
+        })
+        .catch(error => console.error("Erro ao obter o contador de visualizações:", error));
+});
 
 // Adiciona o evento de scroll para chamar a função sempre que o usuário rolar a página
 // window.addEventListener("scroll", onScroll);

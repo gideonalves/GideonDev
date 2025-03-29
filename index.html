@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portfólio de Gideon Alves, Desenvolvedor Front-End especializado em React.js, JavaScript e tecnologias modernas.">
+    <meta name="keywords" content="Gideon Alves, Desenvolvedor Web, Front-End, React.js, JavaScript, Portfólio">
+    <meta name="author" content="Gideon Alves">
+
     <title>Portfólio - GideonDev</title>
 
    
@@ -306,12 +311,12 @@
 
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="./assets/certificados/Certificado-flexbox-origamid .png" alt="Certificado 1">
+                <img src="./assets/certificados/Certificado-flexbox-origamid .png" alt="Certificado 1" loading="lazy">
                 <div class="text">Certificado 1</div>
             </div>
     
             <div class="mySlides fade">
-                <img src="./assets/certificados/Certificado-html-css-origamid.png" alt="Certificado 3">
+                <img src="./assets/certificados/Certificado-html-css-origamid.png" alt="Certificado 3" loading="lazy">
                 <div class="text">Certificado 3</div>
             </div>
     
@@ -352,6 +357,7 @@
     </section>
     <footer>
         <p>&copy; 2025 GideonDev. Todos os direitos reservados.</p>
+        <p id="view-counter">Visualizações: 0</p>
     </footer>
 
       <!-- Botão Voltar ao Topo -->
@@ -367,6 +373,14 @@
     <script src="./scripts/github.js"></script>
     <script src="./scripts/slider.js"></script>
     <script src="./scripts/btnScroll.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
 </body>
 </html>
 

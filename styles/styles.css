@@ -13,7 +13,6 @@
     --quaternary-color: #FFFFFF;
 
     font-size: 62.5%;
-
     --nav-height: 7.2rem;
 }
 
@@ -33,7 +32,6 @@ body {
     text-align: center;
     color: var(--quaternary-color);
     background: var(--secondary-color);
-
     overflow: overlay;
 }
 
@@ -737,10 +735,10 @@ section {
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 3rem 0;
     background: var(--tertiary-color);
     color: white;
-    font-size: 0.9rem;
+    font-size: 2rem;
     margin-top: 2rem;
 }
 
