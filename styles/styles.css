@@ -434,7 +434,7 @@ section {
 /*================= PORTFÓLIO ==================== */
 #cardsContainer {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -446,6 +446,7 @@ section {
 
 .card {
     max-width: 100%;
+    width: 520px;
     background: #fffdfd15;
     padding: 15px;
     border-radius: 8px;
@@ -518,7 +519,6 @@ section {
     padding: 8px 12px;
     border-radius: 12px;
     border: 1px solid var(--primary-color);
-
 }
 
 
@@ -539,12 +539,6 @@ section {
     border-radius: 12px;
     padding: 10px;
     background: hsla(0, 46%, 75%, 0.404);
-}
-
-#sobreMim .header-title {
-    font-size: 18px;
-    color: white;
-    margin-bottom: 30px;
 }
 
 #sobreMim .sobre-mim-text p {
@@ -787,9 +781,14 @@ footer {
 @media (min-width: 1024px) {
 
     /*================= GERAL ==================== */
+   
     .wrapper {
-        width: min(112rem, 100%);
-        
+        width: min(112rem, 100%);  
+    }
+
+    .header-title {
+        font-size: 4rem;
+        margin-bottom: 60px;
     }
     /*================= NAVIGATION ==================== */
     /* RESET */
@@ -930,7 +929,56 @@ footer {
         font-size: 1.5rem;
     }
 
+    /*================= SOBRE MIM ==================== */
+    #header-title-estudos {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
 
+    #sobreMim .sobre-mim-text p {
+        font-size: 2.5rem;        
+        position: relative;
+    }
+
+    .sobre-mim-text p::before {
+        top: -36px;
+        left: -7px;  
+    }
+
+    #sobreMim .container-estudos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    #sobreMim .container-estudos .box {
+        width: 100%;
+        max-width: 400px;
+        height: 150px;
+        margin-top: 30px;
+
+        padding: 30px;
+        border: 1px solid var(--primary-color);
+        border-radius: 12px;
+        background: hsla(0, 46%, 75%, 0.404);
+    }
+
+       /*================= CURSOS ==================== */
+
+    .course-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 15px; 
+    }
+
+    
+/*================= CERTIFICADOS ==================== */
+    .slideshow-container {
+        position: relative;
+        max-width: 600px;
+    }
 }
 
 

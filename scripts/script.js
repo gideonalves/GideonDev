@@ -18,6 +18,26 @@ function closeMenu() {
     document.body.classList.remove('menu-expanded')
 }
 
+// texto digitando
+document.addEventListener("DOMContentLoaded", function () {
+    const typingElement = document.getElementById("typing-text");
+    const text = typingElement.innerHTML.trim(); // Pega o texto já existente no elemento
+    typingElement.innerHTML = ""; // Limpa o conteúdo para iniciar a animação
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            const currentChar = text[index];
+            typingElement.innerHTML += currentChar === "\n" ? "<br>" : currentChar;
+            index++;
+            setTimeout(type, 100); // Ajuste o tempo para controlar a velocidade
+        }
+    }
+
+    type();
+});
+
+
 // Adiciona o evento de scroll para chamar a função sempre que o usuário rolar a página
 // window.addEventListener("scroll", onScroll);
 
