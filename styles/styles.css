@@ -835,7 +835,7 @@ footer {
         }
 
         nav#navigation.scroll .menu ul li a {
-            color: yellow;
+            color: var(--quaternary-color);
         }
 
         nav#navigation .menu li a:hover {
@@ -861,7 +861,7 @@ footer {
         }
 
         nav#navigation.scroll .menu li a::after {
-            background-color: green;
+            background-color: var(--quaternary-color);
         }
 
         nav#navigation .menu li a:hover::after {        
