@@ -11,11 +11,11 @@ const desiredRepos = [
 
 const projectUrls = {
     "caravan": "https://zippy-dusk-46cb76.netlify.app/",
-    "coffee-delivery": "https://zippy-dusk-46cb76.netlify.app/",
+    "coffee-delivery": "https://coffee-delivery-gideondev-git-master-gideonalves-projects.vercel.app/",
     "desafio-todoList-rocketseat": "https://desafio-todo-list-rocketseat-rose.vercel.app/",
     "ignite-timer": "https://ignite-timer-omega-seven.vercel.app/",
     "IgniteFeed": "https://ignite-feed.netlify.app/",
-    "bikcraft": "https://meek-dodol-2482c9.netlify.app/",
+    "bikcraft": "https://leafy-croquembouche-7bb4e0.netlify.app/",
 };
 
 const projectImages = {
