@@ -1,0 +1,30 @@
+.header-title {
+  color: var(--quaternary-color);
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.header-title h2 {
+  display: inline-block;
+  /* Garante que o pseudo-elemento se alinhe corretamente */
+  position: relative;
+  /* Permite que o pseudo-elemento seja posicionado em relação ao h2 */
+}
+
+.header-title h2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  /* Ajuste conforme necessário */
+  left: 0;
+  /* Alinha a barra à esquerda do texto */
+  width: 100%;
+  /* A barra terá a mesma largura que o texto */
+  height: 8px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  z-index: 1;
+  /* Garante que a barra fique acima do fundo, mas abaixo do texto */
+}

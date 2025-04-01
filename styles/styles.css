@@ -45,30 +45,7 @@ ul {
     list-style: none;
 }
 
-.header-title {
-    color: var(--quaternary-color);
-    font-size: 2rem;
-    position: relative;
-    margin-bottom: 30px;
-}
 
-.header-title h2 {
-    display: inline-block; /* Garante que o pseudo-elemento se alinhe corretamente */
-    position: relative; /* Permite que o pseudo-elemento seja posicionado em relação ao h2 */
-}
-
-.header-title h2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0; /* Ajuste conforme necessário */
-    left: 0; /* Alinha a barra à esquerda do texto */
-    width: 70%; /* A barra terá a mesma largura que o texto */
-    height: 8px;
-    border-radius: 50px;
-    background: var(--primary-color);
-    z-index: 1; /* Garante que a barra fique acima do fundo, mas abaixo do texto */
-}
 
 /*================= HEADER ==================== */
 header {
@@ -443,17 +420,30 @@ section {
 }
 
 .card {
-    max-width: 100%;
-    width: 520px;
-    background: #fffdfd15;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border: 1px solid var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  max-width: 100%;
+  width: 520px;
+  background: #fffdfd15;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.08) rotate(1deg);
+  /* Aumenta o tamanho e aplica uma leve rotação */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  /* Aumenta a sombra */
+  border-color: var(--secondary-color);
+  /* Muda a cor da borda */
+  opacity: 0.95;
+  /* Reduz levemente a opacidade */
 }
 
 .project-img {
@@ -532,10 +522,10 @@ section {
     gap: 20px;
 }
 
-#sobreMim .box {
+#sobreMim .container-estudos .box {
     border: 2px solid var(--primary-color);
     border-radius: 12px;
-    padding: 10px;
+    padding: 20px;
     background: hsla(0, 46%, 75%, 0.404);
 }
 
@@ -615,7 +605,7 @@ section {
     margin: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid red;
 }
 
@@ -952,11 +942,10 @@ footer {
 
     #sobreMim .container-estudos .box {
         width: 100%;
-        max-width: 400px;
+        max-width: 520px;
         height: 150px;
         margin-top: 30px;
 
-        padding: 30px;
         border: 1px solid var(--primary-color);
         border-radius: 12px;
         background: hsla(0, 46%, 75%, 0.404);
