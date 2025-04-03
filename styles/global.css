@@ -1,3 +1,131 @@
+/* Reset e estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: hsl(350, 92%, 50%);
+  --secondary-color: #01080E;
+  --tertiary-color: #2c3e50;
+  --quaternary-color: #FFFFFF;
+
+  font-size: 62.5%;
+  --nav-height: 7.2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--quaternary-color);
+  background: var(--secondary-color);
+  overflow: overlay;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*========== BUTTON ========== */
+.btns {
+  display: flex;
+  gap: 3.5rem;
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  width: 9rem;
+  height: 3.125rem;
+  border: 0.125rem solid var(--primary-color);
+  border-radius: 0.75rem;
+  background: none;
+  color: var(--primary-color);
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de brilho */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 200%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+  transition: all 0.6s ease-in-out;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Animação de gradiente no hover */
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animação de borda */
+.btn-primary:hover {
+  border-color: var(--secondary-color);
+}
+
+/* Efeito de clique mais fluído */
+.btn-primary:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+
+
 .header-title {
   color: var(--quaternary-color);
   font-size: 2rem;
@@ -27,4 +155,39 @@
   background: var(--primary-color);
   z-index: 1;
   /* Garante que a barra fique acima do fundo, mas abaixo do texto */
+}
+
+/* Botão Voltar ao Topo */
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  background-color: hsl(350, 92%, 50%);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  right: 2.5rem;
+
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100px);
+  /* Mover para fora da tela inicialmente */
+  transition: opacity 0.3s ease, visibility 0.3s ease;  
+  transition: all 0.3s ease;
+  /* right: 30px;
+  border: none;
+  z-index: 1000; */
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

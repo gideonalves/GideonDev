@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body onscroll="onScroll()">
+<body>
     <nav id="navigation">
         <div class="wrapper">
             <a class="logo" href="#home">
@@ -381,28 +381,30 @@
     </footer>
 
       <!-- Botão Voltar ao Topo -->
-    <button id="btnVoltarTopo" title="Voltar ao topo">
+    <!-- <button id="btnVoltarTopo" title="Voltar ao topo">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-    </button>
+    </button> -->
+    <a id="backToTopButton" href="#home">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </a>
 
     <script>
         <a href="https://www.webcontadores.com">
             <img src="https://counter4.optistats.ovh/private/webcontadores.php?c=w34py78q7qy3l8ges93znc3lzbsm8be2" 
-            border="0"
-           >
+            border="0"/>
         </a>
     </script>
 
     <!-- ScrollReavel lib -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./scripts/script.js"></script>
     <script src="./scripts/github.js"></script>
     <script src="./scripts/slider.js"></script>
-    <script src="./scripts/btnScroll.js"></script>
-
-
-   
+    <script src="./scripts/btnScroll.js"></script>   
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

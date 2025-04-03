@@ -1,52 +1,3 @@
-/* Reset e estilos globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-:root {
-    --primary-color: hsl(350, 92%, 50%);
-    --secondary-color:  #01080E;
-    --tertiary-color: #2c3e50;
-    --quaternary-color: #FFFFFF;
-
-    font-size: 62.5%;
-    --nav-height: 7.2rem;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.6rem;
-    text-align: center;
-    color: var(--quaternary-color);
-    background: var(--secondary-color);
-    overflow: overlay;
-}
-
-.wrapper {
-    width: min(50rem, 100% );
-    margin-inline: auto;
-    padding-inline: 2.4rem;
-}
-
-ul {
-    list-style: none;
-}
-
-
-
 /*================= HEADER ==================== */
 header {
     padding-top: calc(4.1rem + var(--nav-height));
@@ -275,67 +226,6 @@ section {
     font-weight: 700;
 }
 
-/*========== BUTTON ========== */
-.btns {
-    display: flex;
-    gap: 3.5rem;
-
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-.btn-primary {
-    width: 9rem;
-    height: 3.125rem;
-    border: 0.125rem solid var(--primary-color);
-    border-radius: 0.75rem;
-    background: none;
-    color: var(--primary-color);
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 1.125rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Efeito de brilho */
-.btn-primary::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -100%;
-    width: 200%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: rotate(30deg);
-    transition: all 0.6s ease-in-out;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
-}
-
-/* Animação de gradiente no hover */
-.btn-primary:hover {
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Animação de borda */
-.btn-primary:hover {
-    border-color: var(--secondary-color);
-}
-
-/* Efeito de clique mais fluído */
-.btn-primary:active {
-    transform: scale(0.95);
-    opacity: 0.8;
-}
 
 /* --------------- HABILIDADES TÉCNICAS -------------- */
 .section-header h2 {    
@@ -733,40 +623,11 @@ footer {
 }
 
 
-/* Botão Voltar ao Topo */
-#btnVoltarTopo {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: hsl(350, 92%, 50%);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
 
-#btnVoltarTopo:hover {
-    background-color: hsl(350, 92%, 40%);
-    transform: translateY(-3px);
-}
-
-#btnVoltarTopo.visible {
-    opacity: 1;
-    visibility: visible;
-}
 
 /*================= RESPONSIVIDADE ==================== */
 @media (min-width: 1024px) {
+  
 
     /*================= GERAL ==================== */
    
@@ -824,8 +685,16 @@ footer {
             display: none;
         }
 
-        nav#navigation.scroll .menu ul li a {
+
+        nav#navigation.scroll .menu li a {
+            transition: opacity 0.4s;
             color: var(--quaternary-color);
+        }
+
+        nav#navigation .menu li a.active,
+        nav#navigation .menu li a:hover {
+            opacity: 1;
+            font-weight: 700;
         }
 
         nav#navigation .menu li a:hover {
@@ -859,6 +728,25 @@ footer {
             width: 100%;
             
         }
+
+        nav#navigation .menu li a.active::after,
+        nav#navigation .menu li a:hover::after {
+          padding-inline: 0.8rem;
+          width: 100%;
+        }
+
+        nav#navigation.scroll .menu li a.active,
+        nav#navigation.scroll .menu li a:hover {
+          opacity: 1;
+        }
+
+        nav#navigation.scroll .menu a.button.active,
+        nav#navigation.scroll .menu a.button:hover {
+          background-color: var(--primary-color);
+          filter: brightness(1.3);
+          border: none;
+        }
+        
 
     /*================= HOME ==================== */
     #home .wrapper-container h1 {
