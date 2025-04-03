@@ -16,8 +16,35 @@
   --nav-height: 7.2rem;
 }
 
+/* Estiliza a barra de rolagem para navegadores baseados em WebKit */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+  /* Cor do fundo da barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  /* Cor da barra de rolagem */
+  border-radius: 6px;
+  /* Arredondamento da barra */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(350, 92%, 60%);
+  /* Cor ao passar o mouse */
+}
+
 html {
   scroll-behavior: smooth;
+    scrollbar-color: var(--primary-color) var(--secondary-color);
+      /* Cor da barra e do fundo */
+      scrollbar-width: thin;
+      /* Define a largura como fina */
 }
 
 html,
