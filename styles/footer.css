@@ -1,0 +1,161 @@
+
+/*================= FOOTER ============== */
+.footer {
+  border-top: 2px solid hsla(0, 0%, 100%, 0.1);
+
+}
+
+.footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer .footer-column {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  
+}
+
+/* ====== primeira coluna  ========== */
+.footer .footer-column .logo, h2 {
+  color: var(--primary-color);
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  background: hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+}
+
+.footer .social-icons a:hover {
+  background: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ====== Termina a primeira coluna  ========== */
+
+
+/* ====== segunda coluna  ========== */
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+
+}
+
+.footer ul li a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.footer ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer ul li a:hover::after {
+  transform: scaleX(1);
+  color: var(--primary-color);
+}
+
+/* ====== Termina a segunda coluna  ========== */
+
+/* ====== terceira coluna  ========== */
+/* Estilo do container de serviços */
+.services-container {
+  display: flex;
+  justify-content: space-between; /* Espaço entre as colunas */
+  gap: 20px; /* Espaçamento entre as colunas */
+  flex-wrap: wrap; /* Permite que as colunas se ajustem em telas menores */
+}
+
+/* Estilo das colunas */
+.services-container .column {
+
+  flex: 1; /* Cada coluna ocupa o mesmo espaço */
+  min-width: 200px; /* Largura mínima para cada coluna */
+  display: flex;
+  flex-direction: column; /* Itens um abaixo do outro */
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo dos itens de serviço */
+.service-item {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Alinha ícone e texto verticalmente */
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+  font-size: 1.4rem;
+
+  background: rgba(224, 91, 68, 0.158);
+  border: 1px solid rgba(248, 4, 4, 0.548);
+
+  height: 45px;
+  border-radius: 8px;
+  transition: all .3s ease;
+
+
+  color: var(--quaternary-color); /* Cor do texto */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-item i {
+  font-size: 2rem; /* Tamanho do ícone */
+  color: var(--primary-color); /* Cor do ícone */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+  color: var(--primary-color); /* Muda a cor do texto ao passar o mouse */
+}
+
+.copyright {
+  border-top: 2px solid hsla(0, 0%, 100%, 0.1);
+  padding: 1.5rem 1.5rem;
+
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: var(--primary-color);
+} 
+/*================= RESPONSIVIDADE ==================== */
+@media (min-width: 1024px) {
+  .footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+}
